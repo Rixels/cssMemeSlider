@@ -1,4 +1,8 @@
-
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: #faebd7;
+  }
 .wrapper__two {
     display: flex;
     width: 100%;
@@ -12,20 +16,21 @@
     width: 400%;
 }
 .slider__frame {
-    border-radius: 5%;
-    transition: all o.6s ease-in-out;
+    transition: all 0.3s ease-in-out;
     width: 25%;
 }
 .image  {
     width: 100%;
+    border-radius: 2%;
 }
 
 .pick {
     display: none;
   }
-
-  .panel {
+  .panel  {
+    display: inline-block;
     display: flex;
+    background-color: #faebd7;
   }
   .core {
     cursor: pointer;
@@ -33,16 +38,17 @@
     height: 2rem;
     padding: 0.2rem;
     border-radius: 45%;
-    display: flex;
-    
-  }
+    display: flex; 
+   }
   .stand {
      width: 1rem;
      height: 1rem;  
-     border: 0.2rem solid yellow;
+     border: 0.2rem solid rgb(141, 175, 199);
      border-radius: 45%;
      background-color: greenyellow;
   }
+  
+  
   .box {
 
   }
@@ -50,14 +56,11 @@
     width: 899%;
     display: flex;
     overflow: hidden;
-    
   }
   .descript {   
     width: 25%;
-    transition: all o.6s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
-
-
   #pick1:checked ~ .slider .one,
   #pick1:checked ~ .wrapper__two .description__box .first {
     margin-left: 0;
@@ -74,4 +77,19 @@
   #pick4:checked ~ .wrapper__two .description__box .first {
     margin-left: -75%;
   }
-
+  input {
+    caret-color: #FFFFFF;
+  }
+  label:hover .stand {
+    background-color: yellow;
+    border-color: rgb(205, 108, 108);
+  }
+  #pick1:checked ~ .panel label:nth-child(1) .stand,
+  #pick2:checked ~ .panel label:nth-child(2) .stand,
+  #pick3:checked ~ .panel label:nth-child(3) .stand,
+  #pick4:checked ~ .panel label:nth-child(4) .stand {
+    color: #faebd7;
+  }
+  label:active .stand {
+    background-color: rgb(46, 149, 208);
+  }

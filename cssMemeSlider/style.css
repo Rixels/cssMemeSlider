@@ -1,0 +1,77 @@
+
+.wrapper__two {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.wrapper {
+     overflow: hidden;
+}
+.slider {
+    display: flex;
+    width: 400%;
+}
+.slider__frame {
+    border-radius: 5%;
+    transition: all o.6s ease-in-out;
+    width: 25%;
+}
+.image  {
+    width: 100%;
+}
+
+.pick {
+    display: none;
+  }
+
+  .panel {
+    display: flex;
+  }
+  .core {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.2rem;
+    border-radius: 45%;
+    display: flex;
+    
+  }
+  .stand {
+     width: 1rem;
+     height: 1rem;  
+     border: 0.2rem solid yellow;
+     border-radius: 45%;
+     background-color: greenyellow;
+  }
+  .box {
+
+  }
+  .description__box {
+    width: 899%;
+    display: flex;
+    overflow: hidden;
+    
+  }
+  .descript {   
+    width: 25%;
+    transition: all o.6s ease-in-out;
+  }
+
+
+  #pick1:checked ~ .slider .one,
+  #pick1:checked ~ .wrapper__two .description__box .first {
+    margin-left: 0;
+  }
+  #pick2:checked ~ .slider .one,
+  #pick2:checked ~ .wrapper__two .description__box .first {
+    margin-left: -25%;
+  }
+  #pick3:checked ~ .slider .one,
+  #pick3:checked ~ .wrapper__two .description__box .first {
+    margin-left: -50%;
+  }
+  #pick4:checked ~ .slider .one,
+  #pick4:checked ~ .wrapper__two .description__box .first {
+    margin-left: -75%;
+  }
+

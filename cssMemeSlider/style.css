@@ -1,0 +1,106 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    background-color: #faebd7;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+}
+.wrapper__two {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.wrapper {
+     overflow: hidden;
+}
+.slider {
+    display: flex;
+    width: 400%;
+}
+.slider__frame {
+    transition: all 0.3s ease-in-out;
+    width: 25%;
+}
+.image  {
+    width: 100%;
+    border-radius: 2%;
+}
+
+.pick {
+    display: none;
+  }
+  .panel  {
+    display: inline-block;
+    display: flex;
+    background-color: #faebd7;
+  }
+  .core {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    padding: 0.2rem;
+    border-radius: 45%;
+    display: flex; 
+   }
+  .stand {
+     width: 1rem;
+     height: 1rem;  
+     border: 0.2rem solid rgb(141, 175, 199);
+     border-radius: 45%;
+     background-color: greenyellow;
+  }
+  
+  .description__box {
+    width: 899%;
+    display: flex;
+    overflow: hidden;
+  }
+  .descript {   
+    width: 25%;
+    transition: all 0.3s ease-in-out;
+  }
+  #pick1:checked ~ .slider .one,
+  #pick1:checked ~ .wrapper__two .description__box .first {
+    margin-left: 0;
+  }
+  #pick2:checked ~ .slider .one,
+  #pick2:checked ~ .wrapper__two .description__box .first {
+    margin-left: -25%;
+  }
+  #pick3:checked ~ .slider .one,
+  #pick3:checked ~ .wrapper__two .description__box .first {
+    margin-left: -50%;
+  }
+  #pick4:checked ~ .slider .one,
+  #pick4:checked ~ .wrapper__two .description__box .first {
+    margin-left: -75%;
+  }
+  input {
+    caret-color: #FFFFFF;
+  }
+  label:hover .stand {
+    background-color: yellow;
+    border-color: rgb(205, 108, 108);
+  }
+  #pick1:checked ~ .wrapper__two .panel label:nth-child(1) .stand,
+  #pick2:checked ~ .wrapper__two .panel label:nth-child(2) .stand,
+  #pick3:checked ~ .wrapper__two .panel label:nth-child(3) .stand,
+  #pick4:checked ~ .wrapper__two .panel label:nth-child(4) .stand {
+    background-color: #faebd7;
+  }
+  label:active .stand {
+    background-color: rgb(246, 139, 7);
+  }
+
+  @media (max-width: 680px) {
+    .wrapper__two {
+      flex-direction: column;
+      align-items: center;
+      padding-left: 1.2rem;
+      }
+    .box {
+      order: 2;
+      padding-top: 3rem;
+    }
+  }
